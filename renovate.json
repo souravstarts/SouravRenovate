@@ -10,8 +10,7 @@
     {
       "matchPackagePatterns": ["^@angular/"],
       "matchUpdateTypes": ["major"],
-      "groupName": "angular-major",
-      "separateMinorPatch": true
+      "groupName": "angular-major"
     },
     {
       "matchPackagePatterns": ["^@angular/"],
