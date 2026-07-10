@@ -1,0 +1,26 @@
+{
+  "extends": ["config:base"],
+  "dependencyDashboard": true,
+  "labels": ["dependencies", "renovate"],
+  "prConcurrentLimit": 5,
+  "prHourlyLimit": 2,
+  "rangeStrategy": "bump",
+  "automerge": false,
+  "packageRules": [
+    {
+      "matchPackagePatterns": ["^@angular/"],
+      "matchUpdateTypes": ["major"],
+      "groupName": "angular-major",
+      "separateMinorPatch": true
+    },
+    {
+      "matchPackagePatterns": ["^@angular/"],
+      "groupName": "angular",
+      "matchUpdateTypes": ["minor", "patch"]
+    },
+    {
+      "matchManagers": ["npm"],
+      "groupName": "all-dependencies"
+    }
+  ]
+}
